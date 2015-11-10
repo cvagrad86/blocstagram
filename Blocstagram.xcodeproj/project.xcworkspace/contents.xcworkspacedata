@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../DataSource.h">
+   </FileRef>
+   <FileRef
+      location = "group:../DataSource.m">
+   </FileRef>
+   <FileRef
+      location = "group:../Media.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Media.m">
+   </FileRef>
+   <FileRef
       location = "self:Blocstagram.xcodeproj">
    </FileRef>
 </Workspace>
