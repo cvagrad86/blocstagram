@@ -25,12 +25,14 @@
     return self;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 300;
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //override to allow editing
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
+
     
     for (int i = 1; i <= 10; i++) {
         NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
@@ -62,8 +64,7 @@
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     
-    
-    return 0;
+    return self.images.count;
 }
 
 
@@ -96,17 +97,25 @@
 }
     
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //return 300;
+    
+    //this math allows the correct resizing of the images.
+    
+    UIImage *image = self.images[indexPath.row];
+    return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
+
+}
 
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -116,7 +125,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
