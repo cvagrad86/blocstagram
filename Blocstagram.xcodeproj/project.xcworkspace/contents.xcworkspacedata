@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../MediaTableViewCell.h">
+   </FileRef>
+   <FileRef
+      location = "group:../MediaTableViewCell.m">
+   </FileRef>
+   <FileRef
       location = "group:../DataSource.h">
    </FileRef>
    <FileRef
