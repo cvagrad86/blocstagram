@@ -28,6 +28,7 @@
 		9352159A1BF213FD007D4E8E /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 935215991BF213FD007D4E8E /* Media.m */; };
 		9352159D1BF21446007D4E8E /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9352159C1BF21446007D4E8E /* DataSource.m */; };
 		935215A01BF22BF4007D4E8E /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9352159F1BF22BF4007D4E8E /* MediaTableViewCell.m */; };
+		93AB349B1BF48C8500E7740D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB349A1BF48C8500E7740D /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		9352159C1BF21446007D4E8E /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = ../DataSource.m; sourceTree = "<group>"; };
 		9352159E1BF22BF4007D4E8E /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = ../MediaTableViewCell.h; sourceTree = "<group>"; };
 		9352159F1BF22BF4007D4E8E /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = ../MediaTableViewCell.m; sourceTree = "<group>"; };
+		93AB34991BF48C8500E7740D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		93AB349A1BF48C8500E7740D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				933ACFD81BF1FC460036284F /* Images.xcassets */,
 				933ACFDA1BF1FC460036284F /* LaunchScreen.xib */,
 				933ACFCB1BF1FC460036284F /* Supporting Files */,
+				93AB34991BF48C8500E7740D /* LoginViewController.h */,
+				93AB349A1BF48C8500E7740D /* LoginViewController.m */,
 			);
 			path = Blocstagram;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				935215A01BF22BF4007D4E8E /* MediaTableViewCell.m in Sources */,
 				933AD0161BF210A60036284F /* Comment.m in Sources */,
 				933AD0081BF1FD070036284F /* ImagesTableViewController.m in Sources */,
+				93AB349B1BF48C8500E7740D /* LoginViewController.m in Sources */,
 				9352159D1BF21446007D4E8E /* DataSource.m in Sources */,
 				933ACFD11BF1FC460036284F /* AppDelegate.m in Sources */,
 				933ACFCE1BF1FC460036284F /* main.m in Sources */,
