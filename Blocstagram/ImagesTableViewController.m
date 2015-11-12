@@ -37,6 +37,8 @@
     [[DataSource sharedInstance] addObserver:self forKeyPath:@"mediaItems" options:0 context:nil];
 
     self.refreshControl = [[UIRefreshControl alloc] init];
+    
+    //ad in if loop here, if there are cached media images present, to then immediately check for new content?
     [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
 
     //override to allow editing
