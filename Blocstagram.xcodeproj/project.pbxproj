@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		500AEFE04EE7EC5110F8F312 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAF99ECF33C5B99762729F5 /* libPods.a */; };
+		930169781BF4DC1900FE0394 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930169771BF4DC1900FE0394 /* MediaFullScreenViewController.m */; };
 		933ACFCE1BF1FC460036284F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 933ACFCD1BF1FC460036284F /* main.m */; };
 		933ACFD11BF1FC460036284F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 933ACFD01BF1FC460036284F /* AppDelegate.m */; };
 		933ACFD91BF1FC460036284F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933ACFD81BF1FC460036284F /* Images.xcassets */; };
@@ -46,6 +47,8 @@
 		32B5A7BEFF2929E39404928E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4AAF99ECF33C5B99762729F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8C1D380CD051F34EED4155 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		930169761BF4DC1900FE0394 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
+		930169771BF4DC1900FE0394 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		933ACFC81BF1FC450036284F /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		933ACFCC1BF1FC460036284F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		933ACFCD1BF1FC460036284F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				933ACFCB1BF1FC460036284F /* Supporting Files */,
 				93AB34991BF48C8500E7740D /* LoginViewController.h */,
 				93AB349A1BF48C8500E7740D /* LoginViewController.m */,
+				930169761BF4DC1900FE0394 /* MediaFullScreenViewController.h */,
+				930169771BF4DC1900FE0394 /* MediaFullScreenViewController.m */,
 			);
 			path = Blocstagram;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930169781BF4DC1900FE0394 /* MediaFullScreenViewController.m in Sources */,
 				9352159A1BF213FD007D4E8E /* Media.m in Sources */,
 				933AD00B1BF20CA10036284F /* User.m in Sources */,
 				935215A01BF22BF4007D4E8E /* MediaTableViewCell.m in Sources */,
