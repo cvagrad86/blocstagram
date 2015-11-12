@@ -36,6 +36,9 @@
     
     [[DataSource sharedInstance] addObserver:self forKeyPath:@"mediaItems" options:0 context:nil];
 
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
+
     //override to allow editing
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 
@@ -102,6 +105,17 @@
 
 //CP31 challenge - instead of swipe and delete photo, it should be reloaded to the top of the stack, I think this is where that change
 //needs to take place.
+//could the info from cp 32 be used to solve this challenge??
+
+/*Media *media = [[Media alloc] init];
+ media.user = [self randomUser];
+ media.image = [UIImage imageNamed:@"10.jpg"];
+ media.caption = [self randomSentence];
+ 
+ NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
+ [mutableArrayWithKVO insertObject:media atIndex:0];
+ 
+ */
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -153,6 +167,29 @@
             [self.tableView endUpdates];
         }
     }
+}
+
+- (void) refreshControlDidFire:(UIRefreshControl *) sender {
+    [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+        [sender endRefreshing];
+    }];
+}
+
+- (void) infiniteScrollIfNecessary {
+    // #3
+    NSIndexPath *bottomIndexPath = [[self.tableView indexPathsForVisibleRows] lastObject];
+    
+    if (bottomIndexPath && bottomIndexPath.row == [DataSource sharedInstance].mediaItems.count - 1) {
+        // The very last cell is on screen
+        [[DataSource sharedInstance] requestOldItemsWithCompletionHandler:nil];
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+// #4
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self infiniteScrollIfNecessary];
 }
 
 
