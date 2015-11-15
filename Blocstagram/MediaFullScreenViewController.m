@@ -16,6 +16,10 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
+//retrydownload
+@property (nonatomic, strong) UITapGestureRecognizer *retryDownload;
+
+
 //attempt at share button
 @property (nonatomic, strong) UIButton *shareButton;
 
@@ -51,7 +55,8 @@
     // #3
     self.scrollView.contentSize = self.media.image.size;
     
-    
+    //retrydownload
+    self.retryDownload = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(retryDownload:)];
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
     
     self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapFired:)];
@@ -146,6 +151,12 @@
 - (void) tapFired:(UITapGestureRecognizer *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+//retrydownload
+- (void) retryDownload:(UITapGestureRecognizer *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
