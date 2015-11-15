@@ -46,6 +46,9 @@
     //override to allow editing
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 
+    //assignment for the scrollview - slowed the deceleration down vastly.
+    
+    self.tableView.decelerationRate = UIScrollViewDecelerationRateFast;
     
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
     
@@ -111,6 +114,12 @@
     }
 }
 
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Media *mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
+    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) {
+        [[DataSource sharedInstance] downloadImageForMediaItem:mediaItem];
+    }
+}
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     //return 300;

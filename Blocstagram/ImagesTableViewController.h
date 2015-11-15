@@ -11,4 +11,7 @@
 @interface ImagesTableViewController : UITableViewController
 @property (nonatomic, strong) NSMutableArray *images;
 
+@property(nonatomic) CGFloat decelerationRate;
+
+
 @end
