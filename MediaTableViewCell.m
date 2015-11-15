@@ -23,8 +23,7 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
 
-//attempt at share button
-@property (nonatomic, strong) UIButton *shareButton;
+
 
 
 @end

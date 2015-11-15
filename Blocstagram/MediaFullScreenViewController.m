@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
+//attempt at share button
+@property (nonatomic, strong) UIButton *shareButton;
 
 @end
 
@@ -59,6 +61,26 @@
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
+    
+    //add the share button
+    
+    _btn=[[UIButton alloc]init];
+    _btn.frame = CGRectMake(260, 20, 70, 20);
+    
+    [_btn setBackgroundColor:[UIColor whiteColor]];
+    [_btn setAlpha:.5];
+    [_btn setTitle: @"Share" forState:UIControlStateNormal];
+    [_btn setTitleColor: [UIColor blueColor] forState:UIControlStateNormal];
+    [_btn.layer setBorderWidth:1.0f];
+    [_btn.layer setBorderColor:[UIColor blueColor].CGColor];
+    
+    //adding action programatically
+    //float X_Co = self.view.frame.size.width - 70;
+    //float Y_Co = self.view.frame.size.height - 15;
+    //[_btn setFrame:CGRectMake(X_Co, Y_Co, 70, 15)];
+    
+    [_btn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_btn];
     
 
     // Do any additional setup after loading the view.
@@ -148,15 +170,16 @@
         [self.scrollView setZoomScale:self.scrollView.minimumZoomScale animated:YES];
     }
 }
-
 /*
-#pragma mark - Navigation
+#pragma mark - UIButton Action Method - this is as far as I can get on getting the share button to show the activty view controller
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) buttonClicked:(UIButton *)sender {
+    if (sender.state == UIControlEventTouchUpInside) {
+        [self.shareButton cell:self didLongPressImageView:self.mediaImageView];
+    }
 }
-*/
+
+ */
+
 
 @end
