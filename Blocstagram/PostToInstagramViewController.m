@@ -64,10 +64,35 @@
         [self.sendButton addTarget:self action:@selector(sendButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         self.sendBarButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Send", @"Send button") style:UIBarButtonItemStyleDone target:self action:@selector(sendButtonPressed:)];
+        //assignment 44 - rewrite layout code in auto layout to better handle poppver styles - is this what is needed??
         
+/*
+ self.horizontallyCompactConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_mediaImageView]|" options:kNilOptions metrics:nil views:viewDictionary];
+ 
+ NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:320];
+ NSLayoutConstraint *centerConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+ attribute:NSLayoutAttributeCenterX
+ relatedBy:0
+ toItem:_mediaImageView
+ attribute:NSLayoutAttributeCenterX
+ multiplier:1
+ constant:0];
+ 
+ self.horizontallyRegularConstraints = @[widthConstraint, centerConstraint];
+ 
+ 
+ if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+ //It's compact!
+        [self.contentView addConstraints:self.horizontallyCompactConstraints];
+    } else if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
+        // It's regular!
+        [self.contentView addConstraints:self.horizontallyRegularConstraints];
+    }
+
+*/
          [self addFiltersToQueue];
     }
-    
+
     return self;
 }
 
@@ -112,6 +137,11 @@
     [super viewWillLayoutSubviews];
     
     CGFloat edgeSize = MIN(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    
+    if (CGRectGetHeight(self.view.bounds) < edgeSize * 1.5) {
+        edgeSize /= 1.5;
+    }
+    
     
     self.previewImageView.frame = CGRectMake(0, self.topLayoutGuide.length, edgeSize, edgeSize);
     
