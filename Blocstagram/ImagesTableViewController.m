@@ -355,6 +355,17 @@
     }
 }
 
+//this is where we left off yesterday with that aweful internet connection.
+
+- (void) viewDidAppear:(BOOL)animated {
+    if ([DataSource sharedInstance].dataExists) {
+        [self.refreshControl beginRefreshing];
+        [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+            [self.refreshControl endRefreshing];
+        }];
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
     if (indexPath) {
