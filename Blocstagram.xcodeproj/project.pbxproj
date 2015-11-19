@@ -40,6 +40,10 @@
 		936C565E1BFA29F000F46D80 /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936C565D1BFA29F000F46D80 /* CropImageViewController.m */; };
 		936C56611BFA2B8600F46D80 /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936C56601BFA2B8600F46D80 /* ImageLibraryViewController.m */; };
 		937F91AB1BFB1F64000E8071 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937F91AA1BFB1F64000E8071 /* PostToInstagramViewController.m */; };
+		937F91AD1BFB50E4000E8071 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 937F91AC1BFB50E4000E8071 /* UserTests.m */; };
+		937F91AF1BFB52E8000E8071 /* MediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 937F91AE1BFB52E8000E8071 /* MediaTests.m */; };
+		937F91B11BFB57BD000E8071 /* ComposeCommentViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 937F91B01BFB57BD000E8071 /* ComposeCommentViewTest.m */; };
+		937F91B31BFB58FD000E8071 /* MediaTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 937F91B21BFB58FD000E8071 /* MediaTableViewCellTests.m */; };
 		93AB349B1BF48C8500E7740D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB349A1BF48C8500E7740D /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +115,10 @@
 		936C56601BFA2B8600F46D80 /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
 		937F91A91BFB1F64000E8071 /* PostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToInstagramViewController.h; sourceTree = "<group>"; };
 		937F91AA1BFB1F64000E8071 /* PostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToInstagramViewController.m; sourceTree = "<group>"; };
+		937F91AC1BFB50E4000E8071 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		937F91AE1BFB52E8000E8071 /* MediaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTests.m; sourceTree = "<group>"; };
+		937F91B01BFB57BD000E8071 /* ComposeCommentViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentViewTest.m; sourceTree = "<group>"; };
+		937F91B21BFB58FD000E8071 /* MediaTableViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCellTests.m; sourceTree = "<group>"; };
 		93AB34991BF48C8500E7740D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		93AB349A1BF48C8500E7740D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +197,10 @@
 			children = (
 				933ACFE71BF1FC460036284F /* BlocstagramTests.m */,
 				933ACFE51BF1FC460036284F /* Supporting Files */,
+				937F91AC1BFB50E4000E8071 /* UserTests.m */,
+				937F91B01BFB57BD000E8071 /* ComposeCommentViewTest.m */,
+				937F91AE1BFB52E8000E8071 /* MediaTests.m */,
+				937F91B21BFB58FD000E8071 /* MediaTableViewCellTests.m */,
 			);
 			path = BlocstagramTests;
 			sourceTree = "<group>";
@@ -458,7 +470,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937F91AF1BFB52E8000E8071 /* MediaTests.m in Sources */,
+				937F91AD1BFB50E4000E8071 /* UserTests.m in Sources */,
 				933ACFE81BF1FC460036284F /* BlocstagramTests.m in Sources */,
+				937F91B31BFB58FD000E8071 /* MediaTableViewCellTests.m in Sources */,
+				937F91B11BFB57BD000E8071 /* ComposeCommentViewTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
